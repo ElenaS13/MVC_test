@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVC_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ym4-Mw-YGV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NatGeo04" translatesAutoresizingMaskIntoConstraints="NO" id="ej1-Aa-IaU" customClass="BaseImage" customModule="MVC_test" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8cT-1z-R5t"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Av8-EW-F8v">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYx-hg-tA3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OHj-0p-fa6"/>
+                                    <constraint firstAttribute="width" constant="46" id="ppm-xB-cWN"/>
+                                </constraints>
+                                <state key="normal" title="Re"/>
+                                <connections>
+                                    <action selector="renamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Okb-bA-hcW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ej1-Aa-IaU" firstAttribute="trailing" secondItem="Av8-EW-F8v" secondAttribute="trailing" id="EnJ-qd-snY"/>
+                            <constraint firstItem="ej1-Aa-IaU" firstAttribute="leading" secondItem="Av8-EW-F8v" secondAttribute="leading" id="Ktf-PA-5mb"/>
+                            <constraint firstItem="ej1-Aa-IaU" firstAttribute="top" secondItem="ym4-Mw-YGV" secondAttribute="bottom" constant="54" id="RC2-wu-MMX"/>
+                            <constraint firstItem="GYx-hg-tA3" firstAttribute="top" secondItem="Av8-EW-F8v" secondAttribute="bottom" constant="48" id="UDj-z9-nrC"/>
+                            <constraint firstItem="ym4-Mw-YGV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="Unm-Lw-rHz"/>
+                            <constraint firstItem="ej1-Aa-IaU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="Urx-EO-sfB"/>
+                            <constraint firstItem="Av8-EW-F8v" firstAttribute="top" secondItem="ej1-Aa-IaU" secondAttribute="bottom" constant="53" id="WTG-4G-yeb"/>
+                            <constraint firstItem="ym4-Mw-YGV" firstAttribute="centerX" secondItem="ej1-Aa-IaU" secondAttribute="centerX" id="YU2-EF-fUF"/>
+                            <constraint firstItem="GYx-hg-tA3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dzx-Tk-N72"/>
+                            <constraint firstItem="ym4-Mw-YGV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="j9y-fn-faH"/>
+                            <constraint firstItem="ym4-Mw-YGV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nwu-Cl-giu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fullName" destination="ym4-Mw-YGV" id="hpY-LS-K2n"/>
+                        <outlet property="renameField" destination="Av8-EW-F8v" id="204-ID-ZOR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NatGeo04" width="3200" height="2000"/>
+    </resources>
+</document>
